@@ -1,280 +1,187 @@
-/* ABOUT */
-section#mainAboutSection {
-	margin-top: 15.82vw;
+/* BODY MAIN */
+
+header#indexHeader {
+	padding-top: 179px;
+	padding-bottom: 224px;
 }
 
-
-section#mainAboutSection > header{
-	margin-left: 23.45vw;
+header#indexHeader h1 {
+	font-family: "Wondar Quason", sans-serif;
+	font-size: 137px;
+	line-height: 125px;
 }
 
-section#mainAboutSection > header * {
-	font-family: 'LeagueSpartan', sans-serif;
-	font-size: 9.7656vw;
-	color: black;
-	text-transform: uppercase;
+@media all and (max-width: 1000px) {
+	header#indexHeader {
+		padding-top: 140px;
+		padding-bottom: 180px;
+	}
+
+	header#indexHeader h1 {
+		font-size: 100px;
+		line-height: 94px;
+	}
 }
 
-section#mainAboutSection > header span {
-	color: white;
+@media all and (max-width: 600px) {
+	header#indexHeader {
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
+
+	header#indexHeader h1 {
+		font-size: 44px;
+		line-height: 41px;
+	}
 }
 
-section#mainAboutSection article {
-	margin-top: 0.97vw;
-}
+/* PROJECT SECTION */
 
-section#mainAboutSection article *{
-	font-family: 'Lora', serif;
-	font-size: 1.75vw;
-	color: black;
-	width: 37vw;
+section#indexProjectsSection article {
+	position: relative;
 	text-align: center;
-	line-height: 2.54vw;
+	width: 100%;
+	margin-bottom: 80px;
+
+	padding-top: 164px;
+	padding-bottom: 164px;
+	box-sizing: border-box;
 }
 
-section#mainAboutSection article strong {
-	font-weight: 700;
-	color: #F55F5F;
+@media all and (max-width: 1000px) {
+	section#indexProjectsSection article {
+		margin-bottom: 60px;
+	}
 }
 
-section#mainAboutSection article p + p{
-	margin-top: 2.34vw;
+@media all and (max-width: 600px) {
+	section#indexProjectsSection article {
+		margin-bottom: 64px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		overflow: hidden;
+	}
 }
 
-section#mainAboutSection article p:first-of-type {
-	margin-left: 28.34vw;
+section.indexProjectThumbnailSection {
+	position: relative;
+	margin: 0px auto;
 }
 
-section#mainAboutSection article p:last-of-type {
-	margin-left: 34vw;
+section#indexProjectsSection article.ipad section.indexProjectThumbnailSection {
+	width: 636px;
 }
 
-/* PROJECTS */
-section#mainProjectsSection {
-	margin-top: 19.14vw;
-	margin-bottom: 12vw;
+section#indexProjectsSection article.iphone section.indexProjectThumbnailSection,
+section#indexProjectsSection article.iphoneX section.indexProjectThumbnailSection {
+	width: 322px;
 }
 
-section#mainProjectsSection > header {
-	margin-top: -5.85vw;
-	padding: 0px 9.96vw;
+@media all and (max-width: 1000px) {
+	section#indexProjectsSection article.ipad section.indexProjectThumbnailSection {
+		width: auto;
+		margin-left: 80px;
+		margin-right: 80px;
+	}
+
+	section#indexProjectsSection article.iphone section.indexProjectThumbnailSection,
+	section#indexProjectsSection article.iphoneX section.indexProjectThumbnailSection {
+		width: auto;
+		margin-left: 80px;
+		margin-right: 80px;
+	}
 }
 
-section#mainProjectsSection > header * {
-	font-family: 'LeagueSpartan', sans-serif;
-	font-size: 6.835vw;
-	text-align: right;
-	color: black;
-	text-transform: uppercase;
+@media all and (max-width: 600px) {
+	section#indexProjectsSection article.ipad section.indexProjectThumbnailSection {
+		width: auto;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+
+	section#indexProjectsSection article.iphone section.indexProjectThumbnailSection,
+	section#indexProjectsSection article.iphoneX section.indexProjectThumbnailSection {
+		width: auto;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
 }
 
-section#mainProjectsSection div#projectsDiv {
-	margin-top: 3.71vw;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	padding-left: 8.79vw;
-}
-
-/* PROJECT */
-article.projectsArticle {
-	margin: 0px 1.17vw;
-}
-
-article.projectsArticle > header{
+div.indexProjectThumbnailDiv {
+	width: 100%;
 	position: relative;
 }
 
-article.projectsArticle > header a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+section#indexProjectsSection article.ipad div.indexProjectThumbnailWrapperDiv {
+	padding-top: calc( 768 / 1024 * 100%);
 }
 
-article.projectsArticle > header a:before {
-	content: "";
+section#indexProjectsSection article.iphone div.indexProjectThumbnailWrapperDiv {
+	padding-top: calc( 667 / 375 * 100%);
+}
+
+section#indexProjectsSection article.iphoneX div.indexProjectThumbnailWrapperDiv {
+	padding-top: calc( 812 / 375 * 100%);
+}
+
+div.indexProjectThumbnailWrapperDiv > div {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+div.indexProjectThumbnailWrapperDiv div.indexProjectShadowDiv {
+	top: 7%;
+	left: 4%;
+	right: 4%;
+	bottom: -3%;
+
+	filter: blur(40.48px);
+	opacity: 0.45;
+}
+
+div.indexProjectThumbnailWrapperDiv iframe, div.indexProjectThumbnailWrapperDiv img {
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+}
+
+section#indexProjectsSection article.iphoneX div.indexProjectThumbnailWrapperDiv img {
+	border-radius: 34px; 
+}
+
+section#indexProjectsSection article a {
+	display: block;
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.5);
-	opacity: 0;
-	-webkit-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-	transition: opacity 0.2s;
-	z-index: 1;
+	right: 0px;
+	bottom: 0px;
 }
 
-article.projectsArticle > header a:after {
+section#indexProjectsSection article footer {
 	position: absolute;
-	top: 50%;
 	left: 0px;
-	width: 100%;
-
-	content: "ENTER";
-	font-family: "LeagueSpartan", sans-serif;
-	font-size: 2.34vw;
-	color: white;
-	text-align: center;
-
-	margin: auto;
-	margin-top: -1vw;
-
+	right: 0px;
+	bottom: 63px;
 	opacity: 0;
-	-webkit-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-	transition: opacity 0.2s;
-	z-index: 1;
+
+	transition: opacity 0.35s;
 }
 
-article.projectsArticle > header a:hover:before {
-	opacity: 1.0;
-}
-
-article.projectsArticle > header a:hover:after {
-	opacity: 1.0;
-}
-
-article.projectsArticle > header video, article.projectsArticle > header img {
+section#indexProjectsSection article footer h1 {
+	font-family: "Gilroy";
+	font-weight: bold;
+	font-size: 28px;
+	text-align: center;
 	width: 100%;
-	height: 100%;
-	-o-object-fit: cover;
-	   object-fit: cover;
-	-o-object-position: center center;
-	   object-position: center center;
 }
 
-article.projectsArticle > header img {
-	-o-object-position: top center;
-	   object-position: top center;
-}
-
-article.projectsArticle > article {
-	margin-top: 1.17vw;
-}
-
-article.projectsArticle article h1 {
-	font-family: 'LeagueSpartan', sans-serif;
-	font-size: 1.17vw;
-	text-transform: uppercase;
-	padding-bottom: 1.75vw;
-	display: inline-block;
-}
-
-article.projectsArticle article a {
-	font-family: 'Lora', serif;
-	font-style: italic;
-	color: black;
-	opacity: 0.7;
-	font-size: 1.17vw;
-	margin-left: 0.7vw;
-}
-
-article.projectsArticle article a:hover {
-	text-decoration: underline;
-	opacity: 1;
-}
-
-/* Thumbnails */
-article.projectsArticle.landscapePhoneBig > header {
-	width: 51.75vw /*530px*/;
-	height: 29.19vw /*298px*/;
-}
-
-article.projectsArticle.landscapePhoneMedium > header {
-	width: 34.37vw /*352px*/;
-	height: 19.33vw /*198px*/;
-}
-
-article.projectsArticle.landscapePhoneSmall > header {
-	width: 21.87vw /*224px*/;
-	height: 12.30vw/*126px*/;
-}
-
-article.projectsArticle.squareBig > header {
-	width: 25.78vw /*264px*/;
-	height: 25.78vw /*264px*/;
-}
-
-article.projectsArticle.squareMedium > header {
-	
-}
-
-article.projectsArticle.squareSmall > header {
-	width: 19.33vw /*198px*/;
-	height: 19.33vw /*198px*/;
-}
-
-article.projectsArticle.portraitPhoneBig > header {
-	width: 21.87vw /*224px*/;
-	height: 38.77vw /*397px*/;
-}
-
-article.projectsArticle.portraitPhoneMedium > header {
-	width: 17.96vw /*184px*/;
-	height: 32.03vw /*328px*/;
-}
-
-article.projectsArticle.portraitPhoneSmall > header {
-	
-}
-
-article.projectsArticle.landscapeTabletBig > header {
-
-}
-
-article.projectsArticle.landscapeTabletMedium > header {
-	width: 25.78vw /*264px*/;
-	height: 19.43vw /*199px*/;
-}
-
-article.projectsArticle.landscapeTabletSmall > header {
-	
-}
-
-article.projectsArticle:nth-of-type(5) {
-	margin-top: -3.32vw;
-	padding-left: 1.7vw;
-}
-
-article.projectsArticle:nth-of-type(7) {
-	margin-top: -12.89vw;
-	padding-left: 0.9vw;
-}
-
-article.projectsArticle:nth-of-type(8) {
-	margin-top: -22.46vw;
-}
-
-article.projectsArticle:nth-of-type(9) {
-	margin-top: -5.86vw;
-	padding-left: 40.1vw;
-}
-
-/* FOOTER */
-footer#mainFooter {
-	padding: 0px 9.96vw;
-	margin-bottom: 2vw;
-	text-align: right;
-	opacity: 0.7;
-}
-
-footer#mainFooter *{
-	font-family: 'Lora',serif;
-	font-size: 1.36vw;
-	color: black;
-	text-decoration: none;
-}
-
-footer#mainFooter p strong {
-	font-weight: 700;
-	color: #F55F5F;
-}
-
-footer#mainFooter p  a strong {
-	color: black;
+@media all and (min-width: 1001px) {
+	section#indexProjectsSection article a:hover footer {
+		opacity: 0.8;
+	}
 }
