@@ -39,13 +39,13 @@ header#indexHeader h1 {
 
 section#indexProjectsSection article {
 	position: relative;
-	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+
 	width: 100%;
 	margin-bottom: 80px;
-
-	padding-top: 164px;
-	padding-bottom: 164px;
-	box-sizing: border-box;
 }
 
 @media all and (max-width: 1000px) {
@@ -56,75 +56,77 @@ section#indexProjectsSection article {
 
 @media all and (max-width: 600px) {
 	section#indexProjectsSection article {
-		margin-bottom: 64px;
-		padding-top: 40px;
-		padding-bottom: 40px;
-		overflow: hidden;
+		margin-bottom: 60px;
+
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }
 
 section.indexProjectThumbnailSection {
 	position: relative;
-	margin: 0px auto;
+	width: 74%;
+	text-align: center;
+	flex: 0 0 auto;
 }
 
-section#indexProjectsSection article.ipad section.indexProjectThumbnailSection {
-	width: 636px;
-}
-
-section#indexProjectsSection article.iphone section.indexProjectThumbnailSection,
-section#indexProjectsSection article.iphoneX section.indexProjectThumbnailSection {
-	width: 322px;
-}
-
-@media all and (max-width: 1000px) {
-	section#indexProjectsSection article.ipad section.indexProjectThumbnailSection {
-		width: auto;
-		margin-left: 80px;
-		margin-right: 80px;
-	}
-
-	section#indexProjectsSection article.iphone section.indexProjectThumbnailSection,
-	section#indexProjectsSection article.iphoneX section.indexProjectThumbnailSection {
-		width: auto;
-		margin-left: 80px;
-		margin-right: 80px;
-	}
-}
-
-@media all and (max-width: 600px) {
-	section#indexProjectsSection article.ipad section.indexProjectThumbnailSection {
-		width: auto;
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-
-	section#indexProjectsSection article.iphone section.indexProjectThumbnailSection,
-	section#indexProjectsSection article.iphoneX section.indexProjectThumbnailSection {
-		width: auto;
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-}
-
-div.indexProjectThumbnailDiv {
+div.indexProjectThumbnailAspectDiv {
 	width: 100%;
+	height: 0;
 	position: relative;
 }
 
-section#indexProjectsSection article.ipad div.indexProjectThumbnailWrapperDiv {
-	padding-top: calc( 768 / 1024 * 100%);
+div.indexProjectThumbnailAspectDiv[role="highlight"] {
+	padding-top: calc(606 / 772 * 100%);
 }
 
-section#indexProjectsSection article.iphone div.indexProjectThumbnailWrapperDiv {
-	padding-top: calc( 667 / 375 * 100%);
+div.indexProjectThumbnailAspectDiv[role="regular"] {
+	padding-top: calc(330 / 772 * 100%);
 }
 
-section#indexProjectsSection article.iphoneX div.indexProjectThumbnailWrapperDiv {
-	padding-top: calc( 812 / 375 * 100%);
+@media all and (max-width: 600px) {
+	section.indexProjectThumbnailSection {
+		width: 100%;
+	}
 }
 
-div.indexProjectThumbnailWrapperDiv > div {
+div.indexProjectThumbnailAspectInsideDiv {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+div.indexProjectThumbnailDeviceAspectDiv {
+	position: relative;
+	height: 0;
+}
+
+article.ipad div.indexProjectThumbnailDeviceAspectDiv {
+	width: 73%;
+	padding-top: calc(73% * 768 / 1024);
+}
+
+article.iphone div.indexProjectThumbnailDeviceAspectDiv {
+	width: 32%;
+	padding-top: calc( 32% * 667 / 375 );
+}
+
+article.landscapeiphone div.indexProjectThumbnailDeviceAspectDiv {
+	width: 74%;
+	padding-top: calc(74% * 375 / 667);
+}
+
+div.indexProjectThumbnailAspectDiv[role="regular"] div.indexProjectThumbnailDeviceAspectDiv {
+	width: 62%;
+	padding-top: calc(62% * 247 / 483);
+}
+
+div.indexProjectThumbnailDeviceAspectInsideDiv {
 	position: absolute;
 	display: block;
 	top: 0px;
@@ -133,7 +135,20 @@ div.indexProjectThumbnailWrapperDiv > div {
 	bottom: 0px;
 }
 
-div.indexProjectThumbnailWrapperDiv div.indexProjectShadowDiv {
+div.indexProjectThumbnailAspectDiv[role="regular"] div.indexProjectThumbnailDeviceAspectInsideDiv {
+	overflow: hidden;
+}
+
+div.indexProjectThumbnailDeviceAspectInsideDiv > div {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+div.indexProjectThumbnailDeviceAspectInsideDiv div.indexProjectShadowDiv {
 	top: 7%;
 	left: 4%;
 	right: 4%;
@@ -143,17 +158,22 @@ div.indexProjectThumbnailWrapperDiv div.indexProjectShadowDiv {
 	opacity: 0.45;
 }
 
-div.indexProjectThumbnailWrapperDiv iframe, div.indexProjectThumbnailWrapperDiv img {
+div.indexProjectThumbnailDeviceAspectInsideDiv iframe {
 	pointer-events: none;
 	width: 100%;
 	height: 100%;
 }
 
-section#indexProjectsSection article.iphoneX div.indexProjectThumbnailWrapperDiv img {
-	border-radius: 34px; 
+div.indexProjectThumbnailDeviceAspectInsideDiv iframe {
+	pointer-events: none;
+	height: 100%;
 }
 
-section#indexProjectsSection article a {
+div.indexProjectThumbnailDeviceAspectInsideDiv img {
+	width: 100%;
+}
+
+section.indexProjectThumbnailSection a {
 	display: block;
 	position: absolute;
 	top: 0px;
@@ -162,26 +182,37 @@ section#indexProjectsSection article a {
 	bottom: 0px;
 }
 
-section#indexProjectsSection article footer {
-	position: absolute;
-	left: 0px;
-	right: 0px;
-	bottom: 63px;
-	opacity: 0;
-
-	transition: opacity 0.35s;
+header.indexProjectTitleHeader {
+	margin-left: 20px;
 }
 
-section#indexProjectsSection article footer h1 {
-	font-family: "Gilroy";
-	font-weight: bold;
-	font-size: 28px;
-	text-align: center;
-	width: 100%;
-}
-
-@media all and (min-width: 1001px) {
-	section#indexProjectsSection article a:hover footer {
-		opacity: 0.8;
+@media all and (max-width: 600px) {
+	header.indexProjectTitleHeader {
+		margin-left: 0px;
+		margin-top: 20px;
 	}
 }
+
+header.indexProjectTitleHeader a:hover h1,
+header.indexProjectTitleHeader a:hover h2 {
+	text-decoration: underline;
+}
+
+header.indexProjectTitleHeader h1, 
+header.indexProjectTitleHeader h2{
+	font-family: 'Gilroy', sans-serif;
+}
+
+header.indexProjectTitleHeader h1{
+	font-weight: bold;
+	font-size: 22px;
+
+	margin-bottom: 5px;
+}
+ 
+header.indexProjectTitleHeader h2{
+	font-weight: lighter;
+	font-size: 17px;
+	line-height: 24px;
+}
+

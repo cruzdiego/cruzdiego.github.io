@@ -5,7 +5,7 @@ layout: default
 <header id="indexHeader">
 	<hgroup>
 		<h1>
-			Designing
+			Building
 		</h1>
 		<h1>
 			with empathy.
@@ -17,28 +17,41 @@ layout: default
 <section id="indexProjectsSection">
 	{% assign sortedProjects = site.posts | sort: 'order'  %}
 	{% for project in sortedProjects %}
-		<article id="{{ project.id }}" class="{{ project.device }}" style="background: {{ project.backgroundColor | escape }};">
-				<section class="indexProjectThumbnailSection">
-					<div class="indexProjectThumbnailWrapperDiv">
-						<div class="indexProjectShadowDiv" style="background: {{ project.shadowColor }};">
+		<article id="{{ project.id }}" class="{{ project.device }}">
+				<section class="indexProjectThumbnailSection" style="background: {{ project.backgroundColor | escape }};">
+					<div class="indexProjectThumbnailAspectDiv" role="{{ project.category }}">
+						<div class="indexProjectThumbnailAspectInsideDiv">
+							<div class="indexProjectThumbnailDeviceAspectDiv">
+								<div class="indexProjectThumbnailDeviceAspectInsideDiv">
+									<div class="indexProjectShadowDiv" style="background: {{ project.shadowColor }};">
+									</div>
+									<div>
+										{% if project.heroImgName %}
+											<img src="static/media/index/thumbnails/{{ project.heroImgName | escape }}">	
+										{% else %}
+											<iframe src="https://player.vimeo.com/video/{{ project.heroVimeoId }}?autoplay=1&loop=1&background=1" frameborder="0" allow="autoplay; loop"></iframe>
+										{% endif %}
+									</div>
+								</div>
+							</div>
 						</div>
-						<div>
-							{% if project.heroVimeoId %}
-								<iframe src="https://player.vimeo.com/video/{{ project.heroVimeoId }}?autoplay=1&loop=1&background=1" frameborder="0" allow="autoplay; loop"></iframe>
-							{% else %}
-								<img src="static/media/index/thumbnails/{{ project.heroImgName | escape }}">
-							{% endif %}
-						</div>
+						
 					</div>
+					<a href="{{ project.id }}"></a>
 				</section>
 
-				<a href="{{ project.id }}">
-					<footer>
-						<h1 style="color: {{ project.footerColor }};">
-							Enter
+				<header class="indexProjectTitleHeader">
+					<a href="{{ project.id }}">
+						<h1>
+							{{ project.title }}
 						</h1>
-					</footer>
-				</a>
+						{% for role in project.roles %}
+							<h2>
+								{{ role }}
+							</h2>
+						{% endfor %}
+					</a>
+				</header>
 		</article>
 	{% endfor %}
 </section>

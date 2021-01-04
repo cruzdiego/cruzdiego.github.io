@@ -1,17 +1,17 @@
 ---
 layout: post
 published: true
-order: 3
+category: regular
+order: 5
 
 title: PUCP Movil
 description: PUCP Móvil case study
 
-heroImgName: pucpThumbnail.jpg
+backgroundColor: '#E0E4E9'
+roles: [Product Designer]
+heroImgName: pucpThumbnail.png
+postHeroImgName: pucpPostThumbnail.png
 device: iphoneX
-
-backgroundColor: '#CAD1D9'
-shadowColor: '#002D23'
-footerColor: '#738396'
 ---
 
 My old Alma Mater, Pontificia Universidad Catolica del Peru (PUCP), was looking to redesign its mobile app. Its new administration was pushing a digital transformation agenda across all departments.
@@ -20,7 +20,7 @@ My consultation required an open collaboration with the IT department and market
 
 The result was an app centered in students  daily needs when in campus that best represented the university branding and prestige.
 
-![Schedule screen of PUCP Movil app.](/static/media/posts/pucp/picture1.jpg)
+![Schedule screen of PUCP Movil app.](/static/media/posts/pucp/picture1.png)
 
 # Team
 
@@ -29,11 +29,13 @@ The result was an app centered in students  daily needs when in campus that best
 - iOS Developer
 - **UX/UI Designer (Me)**
 
-My role as UX/UI Designer involved getting to know students needs and help define the app’s new set of features.
+My role as UX/UI Designer involved getting to know students needs and help define the app’s new set of features. Defined user flow, designed UI and interactions, with low and high fidelity prototypes.
 
-![Early sketch of Home screen.](/static/media/posts/pucp/picture2.jpg)
+![Early sketch of Home screen](/static/media/posts/pucp/picture2.jpg)
 
-![Low fidelity prototype of PUCP Movil app.](/static/media/posts/pucp/picture3.jpg)
+![Low fidelity prototype](/static/media/posts/pucp/picture3.jpg)
+
+![Course List](/static/media/posts/pucp/picture4.png)
 
 # The Challenge
 
@@ -43,7 +45,7 @@ Unfortunately, no formal design practice was applied and its feature and capabil
 
 Some initial resistance against structural changes in v2 was expected. Thankfully good communication made the team aligned on an important fact: good design is good business.
 
-![A screenshot from PUCP Movil app V.](/static/media/posts/pucp/picture4.png)
+![A screenshot from previous PUCP Movil app V1](/static/media/posts/pucp/picture5.png)
 
 # Getting to know students needs
 
@@ -76,7 +78,7 @@ The team was then committed to help v2 become the center of campus life, startin
 
 Importantly, all the available information shown by v1 was still there, categorized and presented in a more cohesive way.
 
-!['Reserve a ' PUCP Movil app V1.](/static/media/posts/pucp/picture5.jpg)
+![Pod reservation](/static/media/posts/pucp/picture6.png)
 
 # Services taking center stage
 
