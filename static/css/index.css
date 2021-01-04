@@ -170,7 +170,7 @@ div.indexProjectThumbnailDeviceAspectInsideDiv iframe {
 }
 
 div.indexProjectThumbnailDeviceAspectInsideDiv img {
-	height: 100%;
+	width: 100%;
 }
 
 section.indexProjectThumbnailSection a {
@@ -189,7 +189,7 @@ header.indexProjectTitleHeader {
 @media all and (max-width: 600px) {
 	header.indexProjectTitleHeader {
 		margin-left: 0px;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 }
 
@@ -213,5 +213,6 @@ header.indexProjectTitleHeader h1{
 header.indexProjectTitleHeader h2{
 	font-weight: lighter;
 	font-size: 17px;
+	line-height: 24px;
 }
 

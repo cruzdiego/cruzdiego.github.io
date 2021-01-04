@@ -110,7 +110,8 @@ header#postHeader section.landscapeiphone > div {
 		width: auto;
 	}
 
-	header#postHeader section.ipad {
+	header#postHeader section.ipad,
+	header#postHeader section.landscapeiphone {
 		margin-left: 60px;
 		margin-right: 60px;
 	}
@@ -123,7 +124,8 @@ header#postHeader section.landscapeiphone > div {
 }
 
 @media all and (max-width: 600px) {
-	header#postHeader section.ipad {
+	header#postHeader section.ipad,
+	header#postHeader section.landscapeiphone {
 		margin-left: 40px;
 		margin-right: 40px;
 	}

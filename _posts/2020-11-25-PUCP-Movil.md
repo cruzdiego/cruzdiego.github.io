@@ -2,13 +2,13 @@
 layout: post
 published: true
 category: regular
-order: 4
+order: 5
 
 title: PUCP Movil
 description: PUCP Móvil case study
 
 backgroundColor: '#E0E4E9'
-roles: [Product Designer, Lead iOS Developer]
+roles: [Product Designer]
 heroImgName: pucpThumbnail.png
 postHeroImgName: pucpPostThumbnail.png
 device: iphoneX

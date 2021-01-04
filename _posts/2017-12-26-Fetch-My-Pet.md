@@ -2,7 +2,7 @@
 layout: post
 published: true
 category: regular
-order: 5
+order: 6
 
 title: Fetch My Pet
 description: Fetch My Pet case study
