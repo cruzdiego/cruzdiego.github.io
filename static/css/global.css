@@ -6,6 +6,12 @@
 }
 
 @font-face {
+	font-family: "Gilroy";
+	font-weight: lighter;
+	src: url("../resources/fonts/Gilroy/Gilroy-Light.ttf");
+}
+
+@font-face {
 	font-family: "Wondar Quason";
 	font-weight: regular;
 	src: url("../resources/fonts/WondarQuason/wondar-quason.ttf");
@@ -72,6 +78,7 @@ header#bodyHeader {
 
 header#bodyHeader h1 {
 	font-family: "Gilroy", sans-serif;
+	font-weight: bold;
 	font-size: 28px;
 	line-height: 28px;
 }
